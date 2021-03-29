@@ -14,7 +14,7 @@ class LoginController extends Controller
         $user = new UserModel($username, $password);
         $result = (new SecurityService)->login($user);
         if($result == true){
-            return view('Login was Successful. Welcome Admin.')
+            return view('Login was Successful. Welcome ')
                 ->with('model', $user);
         }else{
             return view('Login Failed. Check your Username and Password, something may be wrong')
